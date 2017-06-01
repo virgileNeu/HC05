@@ -13,6 +13,8 @@
 \usepackage[titletoc,toc]{appendix}
 \usepackage{fancyhdr}
 \usepackage{amsmath}
+\usepackage[hidelinks]{hyperref}
+
 
 \fancyhf{}
 \setlength{\headheight}{0pt}
@@ -156,6 +158,7 @@ The registers will have height registers :
     \item The \texttt{reset\_FIFO\_in} register.
 \end{itemize}
 Here is the register map in table \ref{reg_map} below.
+\texttt{
 \captionof{table}{Register map of the Registers component.}
 \label{reg_map}
 \centerline{
@@ -200,6 +203,7 @@ Here is the register map in table \ref{reg_map} below.
 \hline
 \end{tabular}
 \end{center}
+}
 The role of each bit is described below :
 \begin{itemize}
     \item 0x00 :
@@ -284,7 +288,7 @@ For the \texttt{FIFO\_out} we will use the FIFO available in the IP catalogue of
         \item use\_dw[] (10 bits),
         \item empty,
         \item asynchronous clear; \end{itemize}
-    \item Normal synchronous FIFO mode,
+    \item Show ahead FIFO mode,
     \item Auto memory block type,
     \item No optimisation or circuitry protection.
 \end{itemize}
@@ -336,15 +340,15 @@ The external connectivity of the device is described on table \ref{pinout}.
 \hline
 signal name & connectivity\\
 \hline
-BLT\_RxD & GPIO\_1 8 -- FPGA PIN\_AE22\\
+\texttt{BLT\_RxD} & \texttt{GPIO\_1 8 -- FPGA PIN\_AE22}\\
 \hline
-BLT\_TxD & GPIO\_1 6 -- FPGA PIN\_AH24\\
+\texttt{BLT\_TxD} & \texttt{GPIO\_1 6 -- FPGA PIN\_AH24}\\
 \hline
-BLT\_State & \multirow{3}{*}{PCA9673 via Avalon Bus}\\
+\texttt{BLT\_State} & \multirow{3}{*}{\texttt{PCA9673} via Avalon Bus}\\
 \cline{1-1}
-BLT\_EN &\\
+\texttt{BLT\_EN} &\\
 \cline{1-1}
-BLT\_ATSel &\\
+\texttt{BLT\_ATSel} &\\
 \hline
 \end{tabular}
 \end{center}

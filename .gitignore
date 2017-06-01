@@ -1,3 +1,4 @@
-HC05-design.aux
-HC05-design.log
-HC05-design.toc
+*.aux
+*.log
+*.toc
+*.out
