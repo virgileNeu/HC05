@@ -1,10 +1,3 @@
-/*
- * baud_rates.h
- *
- *  Created on: May 12, 2017
- *      Author: neu
- */
-
 #ifndef BAUD_RATES_H_
 #define BAUD_RATES_H_
 

@@ -38,9 +38,10 @@ int main() {
 
 	usleep(1000000); //1s to let the device boot, needed
 	BT_reset_FIFO(&hc05, BLT_RESET_FIFO_IN | BLT_RESET_FIFO_OUT);
-	BT_set_CTRL(&hc05, BLT_UART_ON | BLT_STOP_0);
+	BT_set_CTRL(&hc05, BLT_UART_ON | BLT_STOP_0 | BLT_NO_PARITY);
 	BT_set_baud_rate(&hc05, b38400);
 	char response[100];
+    //set UART parameters : 115200bps, 0 parity, 1 stop bit
 	BT_send_command(&hc05, "AT+UART=115200,0,0", 18);
 	BT_get_data_terminator(&hc05, response);
 	if(strncmp(response, "OK", 2)) {
