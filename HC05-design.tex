@@ -399,7 +399,7 @@ Transmitting data & 60-80 & 300-400 & \\
 
 \section{Bluetooth transfer rate}
 The data transfer rate between the HC05 and another bluetooth device have been measured. The baud rate has a significant impact on it, especially at low rates. The results are presented below on table \ref{throughput_table} and figure \ref{throughput_fig}.\\
-The data throughput is almost constant when higher than 57600 b/s of baud rate, and the only thing changing is the packet size when above 460800 b/s.
+The data throughput is increasing with the baud rate and seems to top at around 160kb per seconds at 921600 bits per seconds of baud rate. The the average packet size is also increasing with the baud rate.
 \begin{center}
 \captionof{table}{Throughput between the HC05 and another bluetooth device}
 \label{throughput_table}
